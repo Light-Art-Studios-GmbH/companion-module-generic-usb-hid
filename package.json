@@ -1,0 +1,70 @@
+{
+	"name": "companion-module-generic-usb-hid",
+	"version": "1.2.0",
+	"description": "Bitfocus Companion module: watches a USB HID device (presenter, clicker, keypad, keyboard) and exposes key presses as variables and feedbacks for triggers. Windows, macOS, Linux.",
+	"main": "src/main.mjs",
+	"license": "MIT",
+	"author": {
+		"name": "Lucas Hoyer",
+		"email": "lh@lightartstudios.de",
+		"url": "https://lightartstudios.de"
+	},
+	"contributors": [
+		"Light Art Studios GmbH"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lightartstudios/companion-module-generic-usb-hid.git"
+	},
+	"bugs": {
+		"url": "https://github.com/lightartstudios/companion-module-generic-usb-hid/issues"
+	},
+	"homepage": "https://github.com/lightartstudios/companion-module-generic-usb-hid#readme",
+	"keywords": [
+		"companion",
+		"bitfocus",
+		"usb",
+		"hid",
+		"presenter",
+		"clicker",
+		"keyboard",
+		"trigger"
+	],
+	"files": [
+		"src/",
+		"scripts/",
+		"companion/",
+		"build-config.cjs",
+		"README.md",
+		"CHANGELOG.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"format": "prettier -w .",
+		"lint": "eslint",
+		"lint:fix": "eslint --fix",
+		"check": "node --check src/main.mjs && for f in src/*.js scripts/*.js test/*.js; do node --check \"$f\" || exit 1; done",
+		"test": "node test/parser.test.js",
+		"list-devices": "node scripts/list-devices.js",
+		"diagnose": "node scripts/diagnose.js",
+		"package": "companion-module-build",
+		"deploy": "rsync -a --delete --exclude .git --exclude .DS_Store --exclude pkg --exclude '*.tgz' ./ \"/Users/lucashoyer/Documents/Companion Developer Modules/companion-module-generic-usb-hid/\""
+	},
+	"dependencies": {
+		"@companion-module/base": "^2.1.3",
+		"node-hid": "^3.4.0"
+	},
+	"optionalDependencies": {
+		"uiohook-napi": "^1.5.5"
+	},
+	"devDependencies": {
+		"@companion-module/tools": "^3.1.0",
+		"eslint": "^9.39.5",
+		"prettier": "^3.8.1",
+		"typescript-eslint": "^8.56.1"
+	},
+	"engines": {
+		"node": "^22.20"
+	},
+	"prettier": "@companion-module/tools/.prettierrc.json"
+}

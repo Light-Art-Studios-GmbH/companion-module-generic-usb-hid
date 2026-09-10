@@ -1,0 +1,33 @@
+{
+	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
+	"type": "connection",
+	"id": "generic-usb-hid",
+	"name": "generic-usb-hid",
+	"shortname": "usb-hid",
+	"description": "Watches a USB HID device (presenter, clicker, keypad, keyboard) and exposes key presses as variables and feedbacks for triggers – Windows, macOS, Linux",
+	"version": "1.2.0",
+	"license": "MIT",
+	"repository": "git+https://github.com/lightartstudios/companion-module-generic-usb-hid.git",
+	"bugs": "https://github.com/lightartstudios/companion-module-generic-usb-hid/issues",
+	"maintainers": [
+		{
+			"name": "Lucas Hoyer (Light Art Studios GmbH)",
+			"email": "lh@lightartstudios.de"
+		}
+	],
+	"legacyIds": ["usb-hid-trigger"],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "2.1.3",
+		"entrypoint": "../src/main.mjs",
+		"permissions": {
+			"native-addons": true,
+			"worker-threads": true,
+			"child-process": true
+		}
+	},
+	"manufacturer": "Generic",
+	"products": ["USB HID Presenter", "USB Clicker", "HID Keyboard / Keypad"],
+	"keywords": ["USB", "HID", "Presenter", "Clicker", "Keyboard", "Trigger", "PowerPoint", "Keynote"]
+}
