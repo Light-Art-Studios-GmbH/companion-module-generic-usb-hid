@@ -3,3 +3,5 @@ pkg/
 *.tgz
 .DS_Store
 ._*
+.yarn/
+.pnp.*

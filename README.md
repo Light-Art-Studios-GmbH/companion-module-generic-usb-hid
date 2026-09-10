@@ -47,7 +47,7 @@ Runtime dependencies: [`node-hid`](https://github.com/node-hid/node-hid) (HID ac
 
 ### From a package (recommended)
 
-`npm run package` (see [Development](#development)) produces `generic-usb-hid-<version>.tgz`.
+`yarn package` (see [Development](#development)) produces `generic-usb-hid-<version>.tgz`.
 Import it in Companion under **Modules → Import module package**.
 
 ### From the developer modules path
@@ -216,17 +216,17 @@ Design rules:
 ## Development
 
 ```bash
-npm install          # dependencies incl. Bitfocus tooling (prettier, eslint, module build)
-npm run format       # prettier, Bitfocus style (tabs, no semicolons, single quotes)
-npm run lint         # eslint with the Bitfocus preset
-npm test             # unit tests
-npm run check        # syntax check of all sources
-npm run list-devices # what the config dropdown will show
-npm run package      # companion-module-build → generic-usb-hid-<version>.tgz
-npm run deploy       # rsync into Companion's developer modules path (macOS dev machine)
+yarn install         # dependencies incl. Bitfocus tooling (yarn 4 via corepack, as in the Bitfocus template)
+yarn format       # prettier, Bitfocus style (tabs, no semicolons, single quotes)
+yarn lint         # eslint with the Bitfocus preset
+yarn test            # unit tests
+yarn check        # syntax check of all sources
+yarn list-devices # what the config dropdown will show
+yarn package      # companion-module-build → generic-usb-hid-<version>.tgz
+yarn deploy       # rsync into Companion's developer modules path (macOS dev machine)
 ```
 
-`npm run package` needs `yarn` on the PATH (the Bitfocus tool installs the external
+`yarn package` needs `yarn` on the PATH (the Bitfocus tool installs the external
 `uiohook-napi` dependency with it): `corepack enable` provides it with Node 22.
 
 Companion 5 specifics worth knowing (they differ from the 1.x module template):

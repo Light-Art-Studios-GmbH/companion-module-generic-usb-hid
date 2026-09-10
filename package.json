@@ -43,12 +43,12 @@
 		"format": "prettier -w .",
 		"lint": "eslint",
 		"lint:fix": "eslint --fix",
-		"check": "node --check src/main.mjs && for f in src/*.js scripts/*.js test/*.js; do node --check \"$f\" || exit 1; done",
+		"check": "node scripts/check-syntax.js",
 		"test": "node test/parser.test.js",
 		"list-devices": "node scripts/list-devices.js",
 		"diagnose": "node scripts/diagnose.js",
 		"package": "companion-module-build",
-		"deploy": "rsync -a --delete --exclude .git --exclude .DS_Store --exclude pkg --exclude '*.tgz' ./ \"/Users/lucashoyer/Documents/Companion Developer Modules/companion-module-generic-usb-hid/\""
+		"deploy": "rsync -a --delete --exclude .git --exclude .DS_Store --exclude pkg --exclude .yarn --exclude '*.tgz' ./ \"/Users/lucashoyer/Documents/Companion Developer Modules/companion-module-generic-usb-hid/\""
 	},
 	"dependencies": {
 		"@companion-module/base": "^2.1.3",
@@ -64,7 +64,9 @@
 		"typescript-eslint": "^8.56.1"
 	},
 	"engines": {
-		"node": "^22.20"
+		"node": "^22.20",
+		"yarn": "^4"
 	},
-	"prettier": "@companion-module/tools/.prettierrc.json"
+	"prettier": "@companion-module/tools/.prettierrc.json",
+	"packageManager": "yarn@4.10.3"
 }
