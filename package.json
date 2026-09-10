@@ -14,12 +14,12 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/lightartstudios/companion-module-generic-usb-hid.git"
+		"url": "git+https://github.com/Light-Art-Studios-GmbH/companion-module-generic-usb-hid.git"
 	},
 	"bugs": {
-		"url": "https://github.com/lightartstudios/companion-module-generic-usb-hid/issues"
+		"url": "https://github.com/Light-Art-Studios-GmbH/companion-module-generic-usb-hid/issues"
 	},
-	"homepage": "https://github.com/lightartstudios/companion-module-generic-usb-hid#readme",
+	"homepage": "https://github.com/Light-Art-Studios-GmbH/companion-module-generic-usb-hid#readme",
 	"keywords": [
 		"companion",
 		"bitfocus",

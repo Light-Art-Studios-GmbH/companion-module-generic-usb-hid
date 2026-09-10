@@ -7,8 +7,8 @@
 	"description": "Watches a USB HID device (presenter, clicker, keypad, keyboard) and exposes key presses as variables and feedbacks for triggers – Windows, macOS, Linux",
 	"version": "1.2.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/lightartstudios/companion-module-generic-usb-hid.git",
-	"bugs": "https://github.com/lightartstudios/companion-module-generic-usb-hid/issues",
+	"repository": "git+https://github.com/Light-Art-Studios-GmbH/companion-module-generic-usb-hid.git",
+	"bugs": "https://github.com/Light-Art-Studios-GmbH/companion-module-generic-usb-hid/issues",
 	"maintainers": [
 		{
 			"name": "Lucas Hoyer (Light Art Studios GmbH)",
